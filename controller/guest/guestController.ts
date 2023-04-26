@@ -1,4 +1,4 @@
-import { Guests, PrismaClient } from '@prisma/client';
+import { PrismaClient } from '@prisma/client';
 import { IGuestCreate, IGuestDao, IGuestDisplay, IGuestUpdate } from './IGuest';
 
 export class GuestDao implements IGuestDao {
@@ -25,7 +25,7 @@ export class GuestDao implements IGuestDao {
 		return newGuest;
 	}
 
-	public async read(ip: string): Promise<Guests | null> {
+	public async read(ip: string): Promise<IGuestDisplay | null> {
 		const guest = await this.prisma.guests.findFirst({
 			where: {
 				ip: ip,
