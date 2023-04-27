@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import { serverHost, serverOrigin } from './serverConfig';
+import { serverOrigin } from './serverConfig';
 import wordRouter from './routers/word/wordRouter';
 import userRouter from './routers/user/userRouter';
 import guestRouter from './routers/guest/guestRouter';
@@ -10,7 +10,7 @@ export const appServer = express();
 
 appServer.use(
 	cors({
-		origin: `http://${serverHost}:${serverOrigin}`,
+		origin: serverOrigin,
 	})
 );
 
