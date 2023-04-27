@@ -4,13 +4,14 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
+		"postinstall": "npm run prisma-generate",
 		"build": "tsc",
 		"start": "node ./src/index.js",
-		"prisma-deploy": "npx prisma migrate deploy --schema=./model/prisma/schema.prisma",
 		"server": "nodemon ./src/index.ts",
-		"lint": "eslint --ext .ts --fix src",
 		"prisma-generate": "npx prisma generate --schema=./model/prisma/schema.prisma",
-		"prisma-migrate": "npx prisma migrate dev --schema=./model/prisma/schema.prisma"
+		"prisma-deploy": "npx prisma migrate deploy --schema=./model/prisma/schema.prisma",
+		"prisma-migrate": "npx prisma migrate dev --schema=./model/prisma/schema.prisma",
+		"lint": "eslint --ext .ts --fix src"
 	},
 	"keywords": [],
 	"author": "",
