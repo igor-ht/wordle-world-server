@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"postinstall": "npm run prisma-deploy; npm run prisma-generate",
+		"postinstall": "npm run prisma-generate; npm run prisma-deploy;",
 		"build": "tsc",
 		"start": "node ./src/index.js",
 		"server": "nodemon ./src/index.ts",
