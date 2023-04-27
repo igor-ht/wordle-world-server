@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"postinstall": "npm run prisma-generate",
+		"postinstall": "npm run prisma-deploy; npm run prisma-generate",
 		"build": "tsc",
 		"start": "node ./src/index.js",
 		"server": "nodemon ./src/index.ts",
@@ -25,6 +25,7 @@
 		"express": "^4.18.2",
 		"jsonwebtoken": "^9.0.0",
 		"pg": "^8.10.0",
+		"dotenv": "^16.0.3",
 		"ts-node": "^10.9.1"
 	},
 	"devDependencies": {
@@ -37,7 +38,6 @@
 		"@types/pg": "^8.6.6",
 		"@typescript-eslint/eslint-plugin": "^5.56.0",
 		"@typescript-eslint/parser": "^5.56.0",
-		"dotenv": "^16.0.3",
 		"eslint": "^8.36.0",
 		"nodemon": "^2.0.22",
 		"prisma": "^4.13.0",
