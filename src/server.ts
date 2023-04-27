@@ -1,6 +1,5 @@
 import express from 'express';
 import cors from 'cors';
-import { serverOrigin } from './serverConfig';
 import wordRouter from './routers/word/wordRouter';
 import userRouter from './routers/user/userRouter';
 import guestRouter from './routers/guest/guestRouter';
@@ -9,9 +8,7 @@ import OAuthRouter from './routers/oauth/OAuthRouter';
 export const appServer = express();
 
 appServer.use(
-	cors({
-		origin: serverOrigin || 'https://wordle-world-client.vercel.app',
-	})
+	cors()
 );
 
 appServer.use(express.json());
