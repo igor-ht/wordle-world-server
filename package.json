@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"build": "prisma generate --schema=./model/prisma/schema.prisma tsc",
+		"build": "tsc",
 		"start": "node .dist/src/index.js",
 		"prisma-deploy": "npx prisma migrate deploy --schema=./model/prisma/schema.prisma",
 		"server": "nodemon ./src/index.ts",
