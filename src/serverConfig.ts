@@ -4,7 +4,7 @@ dotenv.config();
 
 export const serverHost = process.env.APP_HOST as string;
 export const serverPort = +(process.env.APP_PORT as string);
-export const serverOrigin = 'https://wordle-world-client.vercel.app/';
+export const serverOrigin = process.env.APP_ORIGIN as string;
 
 export const encryptionKey = process.env.APP_WORD_KEY as string;
 

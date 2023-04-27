@@ -10,7 +10,7 @@ export const appServer = express();
 
 appServer.use(
 	cors({
-		origin: serverOrigin,
+		origin: serverOrigin || 'https://wordle-world-client.vercel.app',
 	})
 );
 
