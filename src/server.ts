@@ -4,11 +4,14 @@ import wordRouter from './routers/word/wordRouter';
 import userRouter from './routers/user/userRouter';
 import guestRouter from './routers/guest/guestRouter';
 import OAuthRouter from './routers/oauth/OAuthRouter';
+import { serverOrigin } from './serverConfig';
 
 export const appServer = express();
 
 appServer.use(
-	cors()
+	cors({
+		origin: serverOrigin,
+	})
 );
 
 appServer.use(express.json());
