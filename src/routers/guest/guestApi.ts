@@ -4,7 +4,7 @@ import { prisma } from '../../../model/clientDB';
 import { Guests } from '@prisma/client';
 
 let GuestService: GuestDao;
-function GuestController() {
+export function GuestController() {
 	if (!GuestService) GuestService = new GuestDao(prisma);
 	return GuestService;
 }
