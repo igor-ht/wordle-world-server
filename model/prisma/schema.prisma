@@ -24,8 +24,6 @@ model Users {
   registeredAt    DateTime @default(now())
   points          Int
   discoveredWords Words[]  @relation("DiscoveredWords")
-  following       Users[]  @relation("Friends")
-  followedBy      Users[]  @relation("Friends")
 
   @@unique([name, email])
 }
